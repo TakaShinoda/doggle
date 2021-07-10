@@ -67,6 +67,7 @@ export const Search: FC = () => {
               <td className={styles.info}>
                 <strong className="channelName">
                   <a
+                    // @ts-ignore
                     href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
                     target="_blank"
                     rel="noopener noreferrer"
