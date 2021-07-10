@@ -3,7 +3,6 @@ import axios from 'axios'
 import Image from 'next/image'
 import styles from '../styles/Video.module.css'
 
-
 export const Search: FC = () => {
   const [keyword, setKeyword] = useState<string>('')
   const [formDisabled, setoFrmDisabled] = useState<boolean>(false)
@@ -56,27 +55,33 @@ export const Search: FC = () => {
             <tr key={i}>
               <td>
                 <Image
+                  // @ts-ignore
                   src={video.snippet.thumbnails.medium.url}
                   alt="thumbnailsUrl"
+                  // @ts-ignore
                   height={video.snippet.thumbnails.medium.height}
+                  // @ts-ignore
                   width={video.snippet.thumbnails.medium.width}
                 />
               </td>
               <td className={styles.info}>
                 <strong className="channelName">
-                <a
-                  href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.title}
-                >
-                  {video.snippet.title}
-                </a>
+                  <a
+                    href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.title}
+                  >
+                    {/*  @ts-ignore */}
+                    {video.snippet.title}
+                  </a>
                 </strong>
                 <br />
+                {/*  @ts-ignore */}
                 {video.snippet.channelTitle}
                 <br />
                 <span className={styles.description}>
+                  {/*  @ts-ignore */}
                   {video.snippet.description}
                 </span>
               </td>
