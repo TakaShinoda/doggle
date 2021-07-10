@@ -8,6 +8,7 @@ const Post = () => {
             <p>
                 ID: {id}
             </p>
+            何かかく
         </div>
     )
 }
