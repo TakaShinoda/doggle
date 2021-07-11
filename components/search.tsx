@@ -11,12 +11,7 @@ export const Search: FC = () => {
   const handleInputKeyword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value)
   }
-  const views = [
-    { num: '5', value: '5' },
-    { num: '10', value: '10' },
-    { num: '20', value: '20' },
-    { num: '50', value: '50' },
-  ]
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     await axios
